@@ -2,9 +2,8 @@
 import csv
 from matplotlib import pyplot as plt
 from matplotlib import style
-import numpy as np
-import datetime
 from matplotlib import dates as mpl_dates
+import numpy as np
 import datetime
 import io
 import requests
@@ -97,12 +96,16 @@ plt.xlabel('Date')
 plt.ylabel('US Covid-19 positives')
 #plt.plot(date_x,dev_y,linestyle='solid',label='Positives')
 plt.bar(date_x,dev_y,label='Positives')
-plt.tight_layout()
+#plt.tight_layout()
 plt.legend()
+#plt.gca().spines['right'].set_visible(True)
+#plt.gca().patch.set_visible(True)
 #plt.grid(True)
 plt.savefig('US Covid-19 positives vs Date ' +  date_for_print + '.png')
-plt.clf()
 #plt.show()
+plt.grid(True)
+plt.clf()
+
 
 plt.figure(figsize=(14, 6))
 #plt.figure(figsize=(18.0, 12.0)) # The size of the figure is specified as (width, height) in inches
